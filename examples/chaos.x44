@@ -1,0 +1,20 @@
+-- X44 GOD MODE TEST
+-DRAW_LINE
+_log "FULL SYSTEM RUN"
+> "Initializing all hardware modules."
+
+-DRAW_LINE
+_log "OPENING SYSTEM TOOLS..."
++notepad.exe
++calc.exe
+
+-DRAW_LINE
+_log "WAITING FOR CAPTURE KEY (Z)"
+@WAIT "Z"
+%SCREENSHOT
+
+-DRAW_LINE
+_log "FINAL ALARM"
+!ALARM
+$POPUP "X44 Chaos Test Complete"
+?SELF_DESTRUCT
