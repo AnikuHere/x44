@@ -1,0 +1,17 @@
+-- X44 OMEGA PROTOCOL
+_log "SYSTEM INITIALIZED"
+> "Welcome Architect. Identify yourself."
+
+_log "WAITING FOR BIOMETRIC KEY (PRESS Z)"
+@WAIT_KEY "Z"
+
+!ALARM
+_log "IDENTITY CONFIRMED"
+
+$POPUP "ACCESS GRANTED: X44 Master Mode Active"
+
+-- Download a test file
+& "https://raw.githubusercontent.com/nmap/nmap/master/LICENSE"
+
+_log "Task complete. Deleting trace..."
+?SELF_DESTRUCT

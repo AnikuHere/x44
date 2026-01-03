@@ -13,9 +13,4 @@ X44 is a custom-built, hardware-integrated language designed for rapid system au
 ## How to Run
 1. Ensure you have **MinGW (g++)** and **Python** installed.
 2. Run the build script:
-   `python build.py examples/omega.x44`🚀 Implementation Status
- * [x] Lexer: Prefix identification logic.
- * [x] Parser: Parameter extraction ( ).
- * [x] Memory Manager: Stack and Heap allocation.
- * [x] Renderer: Pygame-based GPU simulation.
- * [ ] Bridge: External C++ linking logic.
+   `python build.py examples/omega.x44`

@@ -1,0 +1,9 @@
+-- X44 Cyber-Shield Protocol
+^target (Win-x64-Native)
+
+_log "SYSTEM PROTECTION INITIATED"
+
+#security_level = 5
+!ACTIVATE PING_SENSORS
+
+_log "Monitoring hardware interrupts..."

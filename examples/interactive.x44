@@ -1,0 +1,11 @@
+-- X44 Interactive Logic Test
+^target (pc-x64)
+
+-window (resolution=800x450)
+-draw "X44 MULTI-MODAL INTERFACE"
+-draw "CLICK ANYWHERE TO TRIGGER +CPU LOGIC"
+
+-- This command pulls data directly from the Click Register
+-draw_stat (clicks)
+
+_log "Ready for user interrupt..."

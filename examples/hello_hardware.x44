@@ -1,0 +1,10 @@
+-- X44 Project: First Boot
+^target (Windows-x64)
+
+#user_name = "Nino"
+#access_level = 10
+
+_kernel_msg "Booting System..."
++PERFORM_ALU_CHECK
+
+_kernel_msg "System Online. Welcome, Nino."

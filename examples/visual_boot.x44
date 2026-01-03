@@ -1,0 +1,9 @@
+-- X44 Visual Driver Test
+_log "Initializing Graphics Bridge..."
+
+-window (resolution=800x450)
+-draw "SYSTEM: X44 NATIVE MODE ACTIVE"
+-draw "HARDWARE: NVIDIA/AMD EMULATION STABLE"
+
+#status = ONLINE
+_log "Displaying Status: ONLINE"
