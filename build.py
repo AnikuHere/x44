@@ -2,35 +2,45 @@ import os
 import sys
 import subprocess
 
-def build_x44(source_file):
-    cpp_file = source_file.replace(".x44", ".cpp")
-    exe_file = "X44_App.exe"
-    
-    # --- THE FORCE-PATH FIX ---
-    # We tell Python EXACTLY where g++.exe lives
-    compiler_path = r"C:\mingw64\bin\g++.exe" 
-    
-    if not os.path.exists(compiler_path):
-        print(f"CRITICAL ERROR: Compiler not found at {compiler_path}")
-        print("Please check if the folder C:\\mingw64 exists!")
+def build(source_file):
+    if not os.path.exists(source_file):
+        print("ERROR: File " + source_file + " not found.")
         return
 
-    print(f"--- X44 BUILD PIPELINE STARTING ---")
+    print("[1/2] Transpiling X44 OS Module...")
+    transpiler = os.path.join("src", "transpiler.py")
+    result = subprocess.run(["python", transpiler, source_file])
+    
+    if result.returncode != 0:
+        print("Transpilation failed.")
+        return
 
-    # 1. Transpile
-    subprocess.run(["python", "src/transpiler.py", source_file])
+    cpp_file = source_file.replace(".x44", ".cpp")
+    if not os.path.exists(cpp_file):
+        print("ERROR: .cpp file generation failed.")
+        return
 
-    # 2. Compile (Using the direct path)
-    print(f"[STEP 2/3] Compiling with {compiler_path}...")
-    compile_proc = subprocess.run([compiler_path, cpp_file, "-o", exe_file, "-lws2_32"])
-
-    if compile_proc.returncode == 0:
-        print("[STEP 3/3] Launching Native Binary...")
-        print("-" * 30)
-        subprocess.run([f"./{exe_file}"])
+    print("[2/2] Compiling X44 OS Binary...")
+    # Update this path if your MinGW location is different
+    gpp = r"C:\mingw64\bin\g++.exe" 
+    output_exe = "X44_OS_Core.exe"
+    
+    compile_cmd = [
+        gpp, 
+        cpp_file, 
+        "-o", output_exe, 
+        "-lws2_32", 
+        "-luser32", 
+        "-lgdi32"
+    ]
+    
+    if subprocess.run(compile_cmd).returncode == 0:
+        print("BUILD COMPLETE: " + output_exe)
+        print("Launching...")
+        subprocess.run([output_exe])
     else:
         print("Compilation failed.")
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1:
-        build_x44(sys.argv[1])
+    target = sys.argv[1] if len(sys.argv) > 1 else "examples/omega.x44"
+    build(target)
