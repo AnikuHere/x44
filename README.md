@@ -1,4 +1,4 @@
-### X44 Package
+# X44 Package
 
 
 X44 OS Language & StudioThe Prefix-Driven System Development ToolkitX44 is a minimalistic, high-performance programming language designed for system-level operations. By utilizing a unique Prefix Syntax, X44 eliminates bulky keywords, allowing you to trigger complex system behaviors with single-character identifiers.
@@ -28,5 +28,6 @@ _status = 1
 ⚙️ The PipelineThe X44 architecture follows a direct transformation path:X44 Studio: Code entry and workspace management.Transpiler: Converts - and + commands into optimized C++ function calls.Kernel Build: Compiles the result into a standalone, high-speed executable.
 
  X44 is built by Pointware Studios & AmeBits: AME Division, however is based on one of our devs (hello, im aniku/denius!) projects called SC5.
+
 
 
