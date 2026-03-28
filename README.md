@@ -1,7 +1,7 @@
 # X44 Package
 
 
-X44 OS Language & StudioThe Prefix-Driven System Development ToolkitX44 is a minimalistic, high-performance programming language designed for system-level operations. By utilizing a unique Prefix Syntax, X44 eliminates bulky keywords, allowing you to trigger complex system behaviors with single-character identifiers.
+The X44 programming language is desiigned for simplicity and power at the same time.
 
 ### 🚀 Installation & SetupDownload: 
  Get the latest X44_Ultimate_Setup.exe from the Releases section.
@@ -12,6 +12,7 @@ X44 OS Language & StudioThe Prefix-Driven System Development ToolkitX44 is a min
  X44 Studio is the official minimalistic IDE, providing a workspace for writing, building, and testing X44 modules.Build Function: Compiles scripts directly into native Windows .exe files.
  Integrated Terminal: Monitors the X44 Kernel status during execution.
  Syntax Highlighting: Specifically tuned for X44's prefix-heavy architecture.
+ Alpha: the program is in alpha stage.
  
  ### 📜 Syntax Guide: 
  Action & logic PrefixesIn X44, the character at the start of the line determines the "Module" being called.
