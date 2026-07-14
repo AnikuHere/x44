@@ -1,7 +1,7 @@
 # X44 🚀
 ### A Pure Prefix-Driven Systems & Automation Language
 
-> **Status Notice:** Given software (X44) currently doesnt recieve updates frequently, due to priority of other projects. <
+> **Status Notice:** Given software (X44) currently doesnt recieve updates frequently, due to priority of other projects. <-- READ!
 
 X44 is a highly optimized, lightweight interpreted programming language built around a strict **Prefix Predominance** architecture. By using leading characters to dictate operational context, X44 completely strips away heavy syntactic boilerplate, enabling ultra-fast script execution, direct OS automation, and responsive UI rendering.
 
